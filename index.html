@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReWallet — Regain access to your crypto wallet</title>
+  <meta name="description" content="ReWallet helps you recover access to your crypto wallet quickly, safely, and professionally." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="ReWallet home">
+        <span class="brand__name">ReWallet</span>
+      </a>
+
+      <button class="icon-btn header__menuBtn" type="button" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#why">Why ReWallet?</a></li>
+          <li><a class="nav-link" href="#about">About us</a></li>
+          <li><a class="nav-link" href="#process">How does it work</a></li>
+          <li><a class="nav-link" href="#faq">FAQ</a></li>
+
+          <li class="nav-item--dropdown">
+            <button class="nav-link nav-link--btn" type="button" aria-haspopup="true" aria-expanded="false">
+              Wallets
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="dropdown" role="menu">
+              <li role="none"><a role="menuitem" href="#start">Bitcoin</a></li>
+              <li role="none"><a role="menuitem" href="#start">Ethereum (ERC-20)</a></li>
+              <li role="none"><a role="menuitem" href="#start">Dogecoin</a></li>
+              <li role="none"><a role="menuitem" href="#start">Other</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link" href="#blog">Blog</a></li>
+          <li><a class="nav-link" href="lab6.html">Lab 6</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <button class="lang-btn" type="button" aria-label="Select language">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 12h20" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 2c2.5 2.7 4 6.1 4 10s-1.5 7.3-4 10c-2.5-2.7-4-6.1-4-10S9.5 4.7 12 2Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <span>English</span>
+          </button>
+
+          <button class="btn btn--ghost btn--small" type="button" data-open-register>
+            Register
+          </button>
+
+          <a class="btn btn--ghost" href="#start">Start now</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer" hidden>
+      <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+        <div class="mobile-drawer__top">
+          <span class="brand__name">ReWallet</span>
+          <button class="icon-btn mobile-drawer__close" type="button">
+            <span class="sr-only">Close menu</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a href="#why">Why ReWallet?</a>
+          <a href="#about">About us</a>
+          <a href="#process">How does it work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#start">Wallets</a>
+          <a href="#blog">Blog</a>
+          <a href="lab6.html">Lab 6</a>
+          <button class="btn btn--ghost btn--block" type="button" data-open-register>Register</button>
+          <a class="btn btn--primary" href="#start">Start now</a>
+        </nav>
+      </div>
+      <button class="mobile-drawer__backdrop" type="button" tabindex="-1" aria-hidden="true"></button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            Regain access<br/>
+            to your <span class="accent">crypto wallet</span>
+          </h1>
+
+          <p class="hero-lead">
+            You’ve lost access to your crypto wallet? Then you’ve come to the right place.
+            We can help you recover your wallet — quickly, easily and on a pure success basis.
+            You don’t pay anything until you have access to your wallet again.
+          </p>
+
+          <a class="btn btn--primary hero-cta" href="#start">Unlock your Wallet now</a>
+
+          <div class="wallets-mini" aria-label="Supported wallets preview">
+            <p class="wallets-mini__title">Our most recovered wallets:</p>
+            <ul class="wallets-mini__grid">
+              <li><span class="mini-ico" aria-hidden="true"></span>Ledger Nano S</li>
+              <li><span class="mini-ico" aria-hidden="true"></span>Trezor Wallet</li>
+              <li><span class="mini-ico" aria-hidden="true"></span>Electrum Wallet</li>
+              <li><span class="mini-ico" aria-hidden="true"></span>Multibit Wallet</li>
+              <li><span class="mini-ico" aria-hidden="true"></span>Blockchain.com</li>
+              <li><span class="mini-ico" aria-hidden="true"></span>Bitcoin core</li>
+            </ul>
+            <p class="wallets-mini__more">and many others.</p>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <img src="assets/images/hero-illustration.png" alt="" />
+        </div>
+      </div>
+
+      <div class="partners" aria-label="Partners">
+        <div class="container partners-inner">
+          <ul class="partners-logos" aria-label="As seen on">
+            <li>Bitcoin2Go</li>
+            <li>finanzen.net</li>
+            <li>BTCECHO</li>
+            <li>finanzfluss</li>
+            <li>COINTELEGRAPH</li>
+            <li>BLOCKTRAINER</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why" class="section section--dark">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why ReWallet?</h2>
+          <p>
+            We had the same problem as you. After countless all-nighters and a lot of lost nerves,
+            we were finally able to recover our wallets. Since then, we can offer our experience,
+            know-how and toolkit to help you recover your wallets.
+          </p>
+        </div>
+
+        <div class="cards cards--3">
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h3>Toolkit</h3>
+            <p>Based on our own experience and from work with our clients, we have developed our own toolkit that enables us to recover crypto wallets in a few steps.</p>
+          </article>
+
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M4 21V7l8-4 8 4v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 22V12h6v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Experience</h3>
+            <p>Starting with the wallets of our friends we know, we have since helped numerous clients recover their wallets.</p>
+          </article>
+
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Trust</h3>
+            <p>We know how much trust it takes to send a stranger on the internet details about your wallet. We use a legal contract based on law, which protects you comprehensively.</p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn--primary" href="#start">Unlock your Wallet now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--light">
+      <div class="container about-grid">
+        <div class="about-art" aria-hidden="true">
+          <img src="assets/images/about-illustration.png" alt="" />
+        </div>
+
+        <div class="about-copy">
+          <h2>About us:<br/>Our Story and Mission</h2>
+          <p>
+            We explored various aspects of cryptocurrencies, including using Bitcoin for payments, mining, and trading with different strategies.
+            We also considered starting a company and extensively researched Ethereum and smart contracts. However, we struggled to find a viable business model.
+            Concerns about government intervention and the potential ban of Bitcoin always lingered.
+          </p>
+          <p>
+            The positive developments in 2020 took us by surprise. The influx of capital from established institutions, including the financial industry,
+            made it increasingly challenging for the government to ban Bitcoin. However, we acknowledged that they may still attempt to do so.
+            Recently, when we attempted to transfer our old, now more valuable Bitcoin and Ether to a new wallet, we discovered we had lost access to them completely.
+            We were unable to locate our wallets in the first place.
+          </p>
+
+          <a class="link link--accent" href="#blog">Read more
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section section--dark">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our process</h2>
+          <p>Just fill out our questionnaire and we will see if we can help you.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step__num" aria-hidden="true">01</div>
+            <div class="step__body">
+              <h3>Fill out our questionnaire</h3>
+              <p>By clicking on “Start now” you can easily access our questionnaire, which we use to collect the first important information.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">02</div>
+            <div class="step__body">
+              <h3>We check your request</h3>
+              <p>Based on your information, we will check whether we can help you. We promise that we will get back to you with our assessment within 24 hours.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">03</div>
+            <div class="step__body">
+              <h3>We send you the contract</h3>
+              <p>If we can help you, we will send you our contract for your legal protection. You then send us the other information we need for our work.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num" aria-hidden="true">04</div>
+            <div class="step__body">
+              <h3>We get to work</h3>
+              <p>Once we have all the required information, we will start immediately and can restore your wallet within 48–72h, in the best case.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROMISE -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our promise to<br/>you</h2>
+        </div>
+
+        <div class="cards cards--3">
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M3 12h6l3-9 3 18 3-9h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Speed</h3>
+            <p>We will give you feedback within 24 hours following your request. If we can help you, usually have your wallet restored after a couple of days.</p>
+          </article>
+
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M12 1v22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Success-based commission</h3>
+            <p>You are guaranteed not to pay anything until you have access to your wallet again. In case of a successful recovery, we charge a commission of 20% of your wallet.</p>
+          </article>
+
+          <article class="card card--dark">
+            <div class="card-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24">
+                <path d="M3 3h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 21h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 17v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Service</h3>
+            <p>We can always call or write to us to talk about your problems with your wallet.</p>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn--primary" href="#start">Unlock your Wallet now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--light" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2>Testimonials</h2>
+          <p>Don’t take our word for it. See what customers are saying about us.</p>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonials__viewport" aria-live="polite">
+            <article class="review" data-review>
+              <div class="review__stars" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <p class="review__text">
+                By a stupid mistake, I wrote down only 11 of 12 words of my seed phrase.
+                Desperately I tried it myself but gave up after a short time. By chance, I came across ReWallet and asked if it would be possible to restore access to my wallet.
+                Shorthand later we arranged a meeting in Berlin for the delivery of the seed phrase. About 4 weeks later I got the mail that they email that they have restored the access.
+                Guys, you are great, we need people like you.
+              </p>
+              <p class="review__author">Kai Olaf W.</p>
+            </article>
+
+            <article class="review review--ghost" data-review>
+              <div class="review__stars" aria-label="5 out of 5 stars">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <p class="review__text">
+                I had pretty much written my funds off. The good reviews of ReWallet site convinced me and I finally came and asked for help.
+                Promptly came a response. I was not optimistic. After all, this is about money.
+                But it worked quickly. Very professional.
+              </p>
+              <p class="review__author">Daniel</p>
+            </article>
+          </div>
+
+          <div class="testimonials__controls">
+            <button class="icon-btn" type="button" data-prev aria-label="Previous review">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="icon-btn" type="button" data-next aria-label="Next review">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M9 18l6-6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn--trustpilot" href="#start">
+            See our Reviews on <span class="brand-inline">Trustpilot</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section section--light">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2>ReWallet blog</h2>
+          <p>The latest industry news, interviews, technologies, and resources.</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img class="blog-card__img" src="assets/images/blog1.png" alt="Illustration related to Ethereum recovery" />
+            <div class="blog-card__meta">
+              <span class="avatar" aria-hidden="true"></span>
+              <span class="meta-name">Bruno Krauss</span>
+              <span class="meta-date">28/04/2023</span>
+            </div>
+            <h3 class="blog-card__title">How to Recover Your Ethereum Presale Wallet: Tips To Recover Your Presale ETH</h3>
+            <a class="blog-card__link" href="#start">
+              <span class="sr-only">Read article</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 17L17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <img class="blog-card__img" src="assets/images/blog2.png" alt="Passphrase concept illustration" />
+            <div class="blog-card__meta">
+              <span class="avatar" aria-hidden="true"></span>
+              <span class="meta-name">Bruno Krauss</span>
+              <span class="meta-date">28/04/2023</span>
+            </div>
+            <h3 class="blog-card__title">Trezor Lost Passphrase: What Is an Optional Passphrase and What to Do If You Lose It</h3>
+            <a class="blog-card__link" href="#start">
+              <span class="sr-only">Read article</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 17L17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="blog-card">
+            <img class="blog-card__img" src="assets/images/blog3.png" alt="Trezor seed phrase illustration" />
+            <div class="blog-card__meta">
+              <span class="avatar" aria-hidden="true"></span>
+              <span class="meta-name">Bastian Knaf</span>
+              <span class="meta-date">28/04/2023</span>
+            </div>
+            <h3 class="blog-card__title">Lost or Invalid Trezor Seed Phrase? How to Recover Trezor Wallet &amp; Troubleshoot Issues</h3>
+            <a class="blog-card__link" href="#start">
+              <span class="sr-only">Read article</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7 17L17 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M10 7h7v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn--primary btn--small" href="#blog">See more articles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--light">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <h2>Frequently asked questions</h2>
+        </div>
+
+        <div class="faq" data-accordion>
+          <details class="faq-item">
+            <summary>
+              <span>Can you recover my wallet?</span>
+              <span class="faq-ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-panel">
+              <p>
+                We cannot guarantee that we will be able to help you with your wallet.
+                However, we have already helped many clients with the recovery of their wallets in the past.
+                Through our word libraries, our software tools and our optimized scripts, which we run on high-performance hardware,
+                we can help you find your wallet password or seed phrase.
+                We can also help you with the physical recovery of your wallet.
+                Please send us a request via the contact form and we will give you feedback if and how we can help you.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Which wallets do you support?</span>
+              <span class="faq-ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-panel">
+              <p>We support popular wallets such as Ledger, Trezor, Electrum, MultiBit, Blockchain.com, Bitcoin Core and many others.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How do I start a request?</span>
+              <span class="faq-ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-panel">
+              <p>Click “Start now”, complete the questionnaire and we will assess your case within 24 hours.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>How does payment work?</span>
+              <span class="faq-ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-panel">
+              <p>You pay nothing upfront. If the recovery is successful, we charge a success-based commission of 20% of the recovered wallet.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Can I communicate with you in encrypted form?</span>
+              <span class="faq-ico" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-panel">
+              <p>Yes. We can provide secure channels for communication upon request.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- START NOW -->
+    <section id="start" class="section section--light">
+      <div class="container start-grid">
+        <div class="start-copy">
+          <h2>Start now</h2>
+          <p>You have lost access to your crypto wallet? Then you are in the right place. Submit your request in just a few steps.</p>
+
+          <ul class="bullets">
+            <li><span class="bullet-ico" aria-hidden="true"></span>Free evaluation of your case</li>
+            <li><span class="bullet-ico" aria-hidden="true"></span>Success Based Remuneration</li>
+            <li><span class="bullet-ico" aria-hidden="true"></span>Service agreement in compliant with EU and US Law</li>
+          </ul>
+        </div>
+
+        <form class="wallet-form" aria-label="Wallet selection">
+          <div class="wallet-form__progress" aria-hidden="true">
+            <span class="dot is-active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <h3>What wallet is it?</h3>
+
+          <fieldset class="wallet-form__choices">
+            <legend class="sr-only">Choose a wallet type</legend>
+            <label class="choice">
+              <input type="radio" name="wallet" value="Bitcoin" checked>
+              <span>Bitcoin</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="wallet" value="Ethereum (ERC-20)">
+              <span>Ethereum (ERC-20)</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="wallet" value="Dogecoin">
+              <span>Dogecoin</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="wallet" value="Other">
+              <span>Other</span>
+            </label>
+          </fieldset>
+
+          <button class="btn btn--primary btn--block" type="submit">Continue</button>
+          <p class="form-note" aria-live="polite" data-form-status></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-photo" aria-hidden="true">
+            <img src="assets/images/contact-photo.png" alt="" />
+          </div>
+          <div class="contact-body">
+            <h2>Get in touch!</h2>
+            <p>Your contact - Bastian Knaf</p>
+            <div class="contact-meta">
+              <a href="mailto:team@rewallet.de" class="contact-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M4 6l8 7 8-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>team@rewallet.de</span>
+              </a>
+              <a href="tel:+4930235913270" class="contact-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M22 16.92V21a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 1 4.18 2 2 0 0 1 3 2h4.09a2 2 0 0 1 2 1.72c.12.86.32 1.7.59 2.5a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.58-1.32a2 2 0 0 1 2.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0 1 22 16.92Z"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>+49 (0) 30 2359 13270</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand__name">ReWallet</div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#why">Why ReWallet?</a>
+          <a href="#about">About us</a>
+          <a href="#process">How does it work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#start">Wallets</a>
+          <a href="#blog">Blog</a>
+          <a href="#start">Imprint</a>
+          <a href="#start">Privacy Policy</a>
+        </nav>
+      </div>
+
+      <div class="footer-rating" aria-label="Trustpilot rating">
+        <div class="tp-line">
+          <span class="tp-mark" aria-hidden="true">★</span>
+          <span class="tp-name">Trustpilot</span>
+        </div>
+        <div class="tp-stars" aria-hidden="true">★★★★★</div>
+        <div class="tp-score">4.9</div>
+      </div>
+
+      <div class="footer-meta">
+        <small>© Copyright 2023 ReWallet</small>
+        <div class="social">
+          <a href="#start" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 4h4v16H4zM6 9h0" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M10 10h4v2h.06a4.4 4.4 0 0 1 3.94-2c4.2 0 5 2.5 5 6v6h-4v-5c0-2 0-4-2.5-4s-3 2-3 4v5h-4V10Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </a>
+          <a href="#start" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M17.5 6.5h0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Registration modal (Lab 4) -->
+  <dialog id="register-dialog" class="modal" aria-labelledby="register-title">
+    <div class="modal__panel" role="document">
+      <header class="modal__header">
+        <h2 id="register-title" class="modal__title">Registration</h2>
+        <button class="icon-btn" type="button" data-close-register>
+          <span class="sr-only">Close registration</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </header>
+
+      <form id="register-form" class="modal__form" novalidate>
+        <div class="field">
+          <label class="field__label" for="register-name">Name (required)</label>
+          <input
+            id="register-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+            minlength="2"
+            maxlength="40"
+            pattern="^[A-Za-zА-Яа-яЁё -]{2,40}$"
+            aria-describedby="register-name-error"
+          />
+          <p class="field__error" id="register-name-error" role="status" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="register-email">Email (required)</label>
+          <input
+            id="register-email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            aria-describedby="register-email-error"
+          />
+          <p class="field__error" id="register-email-error" role="status" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="register-password">Password (required, min 6 characters)</label>
+          <div class="field__row">
+            <input
+              id="register-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              required
+              minlength="6"
+              aria-describedby="register-password-error"
+            />
+            <button class="btn btn--ghost btn--small" type="button" data-show-password aria-pressed="false">
+              Show
+            </button>
+          </div>
+          <p class="field__error" id="register-password-error" role="status" aria-live="polite" hidden></p>
+        </div>
+
+        <div class="modal__actions">
+          <button class="btn btn--primary" type="submit">Submit</button>
+          <button class="btn btn--ghost" type="button" data-close-register>Close</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

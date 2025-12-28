@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Шмелев Андрей Павлович 231-322 — Лабораторная работа №6</title>
+  <meta name="description" content="Лабораторная работа №6: JSON + Fetch API" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-api-base="">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="На главную">
+        <span class="brand__name">ReWallet</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация" style="display:flex;">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Главная</a></li>
+          <li><a class="nav-link" href="lab6.html" aria-current="page">Lab 6</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="lab-hero" aria-label="Лабораторная работа 6">
+      <div class="container">
+        <h1>Шмелев Андрей Павлович 231-322 - Лабораторная работа №6</h1>
+        <p>
+          Страница для демонстрации работы с JSON и Fetch API
+      </div>
+    </section>
+
+    <section class="lab-section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Галерея</h2>
+        <p>Данные загружаются с сервера по Fetch API. При ошибке выполняются повторные попытки.</p>
+
+        <div class="toolbar">
+          <button class="btn btn--ghost btn--small" type="button" data-refresh-images>Обновить</button>
+          <div class="loader" data-gallery-loader hidden aria-live="polite">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Загрузка...</span>
+          </div>
+        </div>
+
+        <p data-gallery-empty hidden>Изображения не найдены</p>
+        <div class="gallery-grid" data-gallery-grid></div>
+      </div>
+    </section>
+
+    <section class="lab-section" aria-labelledby="temp-title">
+      <div class="container">
+        <h2 id="temp-title">Температура</h2>
+        <div class="form-grid">
+          <div class="card-surface">
+            <h3>Отправка данных</h3>
+            <p>Форма отправляет POST-запрос с JSON. Во время запроса отправка блокируется.</p>
+
+            <form class="temp-form" data-temp-form>
+              <div class="field">
+                <label class="field__label" for="room">Номер аудитории (обязательно)</label>
+                <input id="room" name="room" type="text" autocomplete="off" required />
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="temperature">Температура (обязательно)</label>
+                <input id="temperature" name="temperature" type="number" inputmode="decimal" required />
+              </div>
+
+              <button class="btn btn--primary" type="submit">Отправить</button>
+            </form>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toasts" aria-live="polite" aria-relevant="additions" data-toasts></div>
+
+  <script src="js/lab6.js"></script>
+</body>
+</html>
